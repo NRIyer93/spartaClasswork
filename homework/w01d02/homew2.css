@@ -1,0 +1,78 @@
+/* Layout*/
+body {
+
+	background-image: url(hmw2img/bgtile.png);
+	background-repeat: repeat;
+	/*background-size: 50% auto;*/
+
+	border: 2px;
+}
+
+header {
+
+	border: 2px solid black;
+}
+
+main {
+
+	border: 2px solid red;
+	background-color: white;
+}
+
+
+aside {
+
+	border: 2px solid black;
+	display: inline-block;
+
+}
+
+section {
+
+	border: 2px solid black;
+}
+
+footer {
+
+	border: 2px solid darkgreen;
+	background-color: white;
+
+
+}
+
+#nav {
+	list-style: none;
+	margin: none;
+	padding: 0;
+	height: 30px;
+	color: blue;
+	background-color: white;
+	font-family: Arial;
+	font-size: 0.9em
+}
+
+#nav li {
+
+	float: left;
+	height: 10px;
+	line-height: 30px;
+	font-family: Verdana;
+}
+
+#nav li a {
+
+	display: block;
+	padding: 20px;
+	color: blue;
+	text-decoration: none;
+}
+ul {
+
+	list-style: none;
+
+}
+
+h3	{
+
+	color: blue;
+}

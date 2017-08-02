@@ -1,0 +1,82 @@
+
+body {
+
+	color: black;
+
+}
+
+
+
+h1 {
+
+	color: black;
+	font-family: serif;
+
+}
+
+p {
+
+	color: red;
+	font-family: Verdana;
+	font-size: 15px;
+}
+
+.special {
+
+	text-decoration: underline;
+	color: red;
+}
+
+#name {
+
+	font-weight: bold;
+}
+
+#boring {
+
+	text-decoration: none;
+}
+
+section:nth-child(2) {
+	background-color: grey;
+}
+
+
+
+/* Layout */
+header {
+
+	border: 2px solid blue;
+}
+
+main {
+
+	border: 2px solid red;
+}
+
+aside {
+
+	background-color: green;
+	width: 200px;
+	height: 300px;
+	display: inline-block;
+}
+
+footer {
+
+	border: 2px solid yellow;
+}
+
+section {
+	padding: 20px;
+	margin: 20px;
+	width: 400px;
+	height: 250px;
+	display: inline-block;
+	float: left;
+}
+
+
+
+
+
