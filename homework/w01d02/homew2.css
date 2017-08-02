@@ -25,6 +25,7 @@ aside {
 	border: 2px solid black;
 	display: inline-block;
 
+
 }
 
 section {
@@ -37,6 +38,12 @@ footer {
 	border: 2px solid darkgreen;
 	background-color: white;
 
+
+}
+div.image3 {
+
+	display: inline-block;
+	height: 30px
 
 }
 
@@ -57,12 +64,14 @@ footer {
 	height: 10px;
 	line-height: 30px;
 	font-family: Verdana;
+	width: 75px;
+	
 }
 
 #nav li a {
 
 	display: block;
-	padding: 20px;
+	padding: 50px;
 	color: blue;
 	text-decoration: none;
 }
