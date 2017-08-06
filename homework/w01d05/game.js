@@ -39,31 +39,62 @@ var compChoice = Math.random();
  }
 
 
+
  //var result = compChoice;
 
- 
-/*	switch(choice) {
+		if (choice == "ROCK") {
 
- 	case 1:
+ 			if (compChoice <= 0.33){
 
- 		if (compChoice <= 0.33 && choice == "ROCK") {
+ 				alert("DRAW");
+ 			
+ 			} else if(compChoice == "PAPER"){
 
- 			alert("DRAW");
+ 				alert("Computer wins with PAPER!");
+ 			
+ 			} else {
+
+ 				alert("You win with ROCK!");
+ 			}
  		
- 		} else if((compChoice >= 0.34 && compChoice <= 0.66) && choice == "PAPER") {
+ 		} else if (choice == "PAPER") {
 
- 			alert("YOU WIN WITH PAPER");
- 		
- 		} else if(compChoice >= 0.67 && choice == "SCISSORS") {
+ 			if (compChoice == "ROCK"){
 
- 			alert("COMPUTER WINS WITH ROCK");
- 		
+ 				alert("You win with PAPER!");
+ 			
+ 			} else if(compChoice == "PAPER"){
+
+ 				alert("DRAW!");
+ 			
+ 			} else {
+
+ 				alert("You lose!");
+ 			}
+
+ 		} else if (choice == "SCISSORS") {
+
+ 			if (compChoice == "ROCK"){
+
+ 				alert("You lose!");
+ 			
+ 			} else if(compChoice == "PAPER"){
+
+ 				alert("You win with SCISSORS!");
+ 			
+ 			} else {
+
+ 				alert("DRAW!");
+ 			}
+
+
  		} else {
 
- 			null;
- 		} 
+ 			alert("Invalid choice");
+ 		}
+ 		
 
-*/
+ 
  		
 
  		
