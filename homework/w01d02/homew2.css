@@ -6,6 +6,8 @@ body {
 	/*background-size: 50% auto;*/
 
 	border: 2px;
+	height: auto;
+	width: 1000px;
 }
 
 header {
@@ -43,7 +45,7 @@ footer {
 div.image3 {
 
 	display: inline-block;
-	height: 30px
+	height: 100px
 
 }
 
@@ -65,7 +67,7 @@ div.image3 {
 	line-height: 30px;
 	font-family: Verdana;
 	width: 75px;
-	
+
 }
 
 #nav li a {
