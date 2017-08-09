@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 	var myForm = document.getElementById('myForm');
-myForm.addEventListener('submit', function(event){
+	myForm.addEventListener('submit', function(event){
 	
 	event.preventDefault();
 	var firstnameField = document.getElementById('firstname');

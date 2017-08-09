@@ -4,7 +4,7 @@ var button = document.getElementsByClassName('number');
 var operators = document.getElementsByClassName('operator');
 var display = document.getElementsByClassName('display')[0];
 var eval = document.getElementsByClassName('eq');
-var num1, num2;
+//var num1, num2;
 
 // event listener for numbers
 for(var i = 0; i < button.length; i++) {
