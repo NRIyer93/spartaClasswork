@@ -4,7 +4,7 @@
 
 $(function(event){
 // Variables for player1 and player2
-
+var array;
 // player1 variables
 var playerXchoice = [];
 
@@ -41,13 +41,18 @@ function onClick(box1,){
 		if(turn % 2 === 0){
 			$(box1).html('X'); // converts the data attribute to 'X'
 			turn += 1;
+			console.log('X turn');
 			// store move?
-			var position = $(box1).attr("data-num");
-			var indexPosition; 
+			 var position = $(box1).attr("data-num");
+			 var array = playerXchoice.push(position);
+			 console.log(array);
 		}else {
 			$(box1).html('O'); // converts the data attribute to 'O'
 			turn +=1;
+			console.log('O turn');
 			// store move?
+			var array = playerOchoice.push(position);
+			console.log(array);
 		}
 	});
 }
