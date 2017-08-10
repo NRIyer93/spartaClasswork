@@ -1,5 +1,5 @@
 /////////////////////
-//	First Section  //
+//	  Variables   //
 ////////////////////
 
 $(function(event){
@@ -59,32 +59,22 @@ function onClick(box1,){
 			var array = playerOchoice.push(position);
 			turn +=1;
 			console.log(playerOchoice);
-			
 		}
-		 
-		
 	});
 }
-
 
 // function to iterate through the winning combinations 
 // and compare with the player's moves
 $(winArrays).each(function(index, array){
 		// if statement to compare choice
+		$()
+
+
+
 		if(index === playerXchoice){
 			console.log('successful');
 		}
-})
-
-
-// function which stores number in array
-// function onClick(box2,){
-// 	$(box2).on('click', function(){
-// 		console.log($(box2).attr("data-num"));
-// 		})
-// }
-
-
+	})
 })
 
 
