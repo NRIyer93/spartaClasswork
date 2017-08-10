@@ -44,24 +44,25 @@ function onClick(box1,){
 			$(box1).html('X'); // converts the data attribute to 'X'
 			
 			console.log('X turn');
-			// store move?
+			// store move in array containing X's moves
 			 var position = $(box1).attr("data-num");
 			 console.log("this is X's move: " + position);
 			 var array = playerXchoice.push(position);
 			 turn += 1;
+			 console.log(playerXchoice);
 		}else {
 			$(box1).html('O'); // converts the data attribute to 'O'
-			
 			console.log('O turn');
-			// store move?
+			// store move in array containing O's moves
 			var position = $(box1).attr("data-num");
 			console.log("this is O's move: " + position);
 			var array = playerOchoice.push(position);
 			turn +=1;
-			//console.log(array);
+			console.log(playerOchoice);
+			
 		}
-		console.log(playerXchoice); // shows the array contain
-		console.log(playerXchoice);
+		 
+		
 	});
 }
 
