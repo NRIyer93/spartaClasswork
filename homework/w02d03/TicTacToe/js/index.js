@@ -6,10 +6,10 @@ $(function(event){
 // Variables for player1 and player2
 var array;
 // player1 variables
-var playerXchoice = [];
+var playerXchoices = [];
 
 // player2 variables
-var playerOchoice = [];
+var playerOchoices = [];
 
 // winning combinations
 var winArrays = [["0","1","2"], ["0","3","6"], ["6","7","8"], 
@@ -17,12 +17,6 @@ var winArrays = [["0","1","2"], ["0","3","6"], ["6","7","8"],
 
 // counter for turns taken
 var turn = 1;
-
-// comparison of player choice with stored winning combinations 
-
-
-
-
 
 // declare all the button-boxes
 var boxes = $("td");
@@ -47,18 +41,18 @@ function onClick(box1,){
 			// store move in array containing X's moves
 			 var position = $(box1).attr("data-num");
 			 console.log("this is X's move: " + position);
-			 var array = playerXchoice.push(position);
+			 var array = playerXchoices.push(position);
 			 turn += 1;
-			 console.log(playerXchoice);
+			 console.log(playerXchoices);
 		}else {
 			$(box1).html('O'); // converts the data attribute to 'O'
 			console.log('O turn');
 			// store move in array containing O's moves
 			var position = $(box1).attr("data-num");
 			console.log("this is O's move: " + position);
-			var array = playerOchoice.push(position);
+			var array = playerOchoices.push(position);
 			turn +=1;
-			console.log(playerOchoice);
+			console.log(playerOchoices);
 		}
 	});
 }
@@ -67,13 +61,15 @@ function onClick(box1,){
 // and compare with the player's moves
 $(winArrays).each(function(index, array){
 		// if statement to compare choice
-		$()
-
-
-
-		if(index === playerXchoice){
+		$(playerXchoices).each(function(index1, choice){
+			if(winArrays.index === playerXchoices.index1){
 			console.log('successful');
 		}
+		})
+
+
+
+		
 	})
 })
 
