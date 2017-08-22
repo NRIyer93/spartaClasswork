@@ -1,5 +1,3 @@
-$op_choice
-
 def add_num(num1, num2) 
 	result = num1 + num2
 	return result
@@ -21,36 +19,32 @@ def divide(num1, num2)
 end
 
 def user_choice
-	
 	puts "Choose an operation ( + , -, *, /, s, p)"
 	op_choice = gets.chomp
 	
 	puts "Please enter first number"
 	num1 = gets.chomp
 	
-
 	puts "Please enter second number"
 	num2 = gets.chomp
 
-	
-
-	if op_choice == "+" then
+	if op_choice == "+" 
 	 result = num1.to_i + num2.to_i
 	 puts result.to_i
-	elsif op_choice == "-" then
+	elsif op_choice == "-" 
 	 result = num1.to_i - num2.to_i
 	 puts result.to_i
-	elsif op_choice == "*" then
+	elsif op_choice == "*" 
 	 result = num1.to_i * num2.to_i
 	 puts result.to_i
-	elsif op_choice == "/" then
+	elsif op_choice == "/" 
 	 result = num1.to_i / num2.to_i
 	 puts result.to_f
-	elsif op_choice == 's' then
+	elsif op_choice == 's' 
 	 result = Math.sqrt(num1.to_i)
 	 puts result 
-	elsif op_choice == 
-	end
+	# elsif op_choice == 
+	 end
 end
 
 def trip_calc 

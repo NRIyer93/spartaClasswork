@@ -16,7 +16,7 @@ var winArrays = [["0","1","2"], ["0","3","6"], ["6","7","8"],
 				["2","5","8"], ["0","4","8"], ["6","4","2"], ["3","4","5"], ["1","4","7"]]; 
 
 // counter for turns taken
-var turn = 1;
+var switchTurn = 1;
 
 // declare all the button-boxes
 var boxes = $("td");
@@ -34,7 +34,7 @@ function onClick(box1,){
 		//console.log($(box1).attr("data-num"));
 		
 		// if statement to determine which player is which
-		if(turn % 2 === 0){
+		if(switchTurn % 2 === 0){
 			$(box1).html('X'); // converts the data attribute to 'X'
 			
 			console.log('X turn');
@@ -42,7 +42,7 @@ function onClick(box1,){
 			 var position = $(box1).attr("data-num");
 			 console.log("this is X's move: " + position);
 			 var array = playerXchoices.push(position);
-			 turn += 1;
+			 switchTurn += 1;
 			 console.log(playerXchoices);
 		}else {
 			$(box1).html('O'); // converts the data attribute to 'O'
@@ -51,7 +51,7 @@ function onClick(box1,){
 			var position = $(box1).attr("data-num");
 			console.log("this is O's move: " + position);
 			var array = playerOchoices.push(position);
-			turn +=1;
+			switchTurn +=1;
 			console.log(playerOchoices);
 		}
 	});

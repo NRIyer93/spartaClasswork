@@ -28,7 +28,7 @@ $(function(event){
 
 	$("#count").html('10').css("color", "grey");
 
-	var button = $("<button id=\"myButton\">Click</button>");
+	var button = $((("<button id=\"myButton\">Click</button>");
 	$("body").append(button);
 
 	$("#myButton").on('click', function(){

@@ -41,7 +41,7 @@ function options(){
 	if (choice == "+") {
 		userChoice(num1, num2);
 		addNumbers(num1, num2);
-	} else if (choice == "-") {
+	} else if (choice == "-") {n
 		userChoice(num1, num2);
 		subNumbers(num1, num2);
 	} else if (choice == "*") {
