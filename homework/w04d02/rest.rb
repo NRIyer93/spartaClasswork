@@ -13,6 +13,10 @@ post "/movies" do
 	"CREATE"
 end
 
+put "/movies/:id/edit" do
+	"EDIT"
+end
+
 
 
 
