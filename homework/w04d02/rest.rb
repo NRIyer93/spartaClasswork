@@ -9,15 +9,12 @@ get "/movies/new" do
 	"NEW"
 end
 
-post "/movies" do 
-	"CREATE"
-end
-
-put "/movies/:id/edit" do
-	"EDIT"
+get "/movies/:id" do
+	"SHOW"
 end
 
 
+ 
 
 
 
@@ -26,13 +23,6 @@ end
 
 
 
-
-
-
-
-
-
-
-# get "/movies/:id" do
-
-# end
+# put "/movies/:id/edit" do
+# # 	"UPDATE"
+# # end
