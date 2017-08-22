@@ -13,6 +13,10 @@ get "/movies/:id" do
 	"SHOW"
 end
 
+put "/movies/:id/edit" do
+	"UPDATE"
+end
+
 
  
 
