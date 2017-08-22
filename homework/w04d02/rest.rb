@@ -25,6 +25,10 @@ put "/movies/:id" do
 	"UPDATE"
 end
 
+delete "/movies/:id" do
+	"DESTROY"
+end
+
 
 
 
