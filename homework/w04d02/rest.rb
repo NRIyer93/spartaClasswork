@@ -9,7 +9,7 @@ get "/movies/new" do
 	"NEW"
 end
 
-post "/" do
+post "/movies" do
 	"CREATE"
 end
 
