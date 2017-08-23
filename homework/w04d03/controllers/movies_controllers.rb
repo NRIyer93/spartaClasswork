@@ -4,25 +4,25 @@ class MoviesControllers < Sinatra::Base
 		{
 			id: 0,
 			title: "Shawshank Redemption",
-			content: ""
+			content: "jajajaja",
 		},
 
 		{
 			id: 1,
-			title: "Blood Diamond"
-			content: ""
+			title: "Blood Diamond",
+			content: "jajajaja",
 		},
 
 		{
 			id: 2,
-			title: "This Is The End"
-			content: ""
+			title: "This Is The End",
+			content: "jajajaja",
 		}
 	]
 
 	set :root, File.join(File.dirname(__FILE__), '..')
 
-	set :view, Proc.new { File.join(root, 'views') }
+	set :views, Proc.new { File.join(root, 'views') }
 
 	configure :development do
 		register Sinatra::Reloader
@@ -30,7 +30,8 @@ class MoviesControllers < Sinatra::Base
 
 	get '/' do
 		"INDEX"
-
+		@title = "Movie Reviews"
+		@movies = $movies
 		erb :'movies/index'
 	end
 
@@ -42,12 +43,15 @@ class MoviesControllers < Sinatra::Base
 		"CREATE"
 	end
 
-	get '/:id/edit'
+	get '/:id/edit' do
 		"EDIT"
 	end
 
 	get '/:id' do
 		"SHOW"
+		id = params[:id].to_i
+		@movie = $movies[id]
+		erb :'movies/show'
 	end
 
 	put '/:id' do
@@ -57,5 +61,6 @@ class MoviesControllers < Sinatra::Base
 	delete '/:id' do
 		"DESTROY"
 	end
+
 
 end
