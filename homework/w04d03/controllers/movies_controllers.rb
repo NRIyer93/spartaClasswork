@@ -1,6 +1,24 @@
-class PostControllers < Sinatra::Base 
+class MoviesControllers < Sinatra::Base 
 
+	$movies = [
+		{
+			id: 0,
+			title: "Shawshank Redemption",
+			content: ""
+		},
 
+		{
+			id: 1,
+			title: "Blood Diamond"
+			content: ""
+		},
+
+		{
+			id: 2,
+			title: "This Is The End"
+			content: ""
+		}
+	]
 
 	set :root, File.join(File.dirname(__FILE__), '..')
 
@@ -12,6 +30,8 @@ class PostControllers < Sinatra::Base
 
 	get '/' do
 		"INDEX"
+
+		erb :'movies/index'
 	end
 
 	get '/new' do
