@@ -34,9 +34,21 @@ class RecipesController < Sinatra::Base
 		erb :'recipes/index'
 	end
 
-	get '/:id' do
-		id = params[:id].to_i
-		@recipe = $recipes[id]
-		erb :'recipes/show'
+	get '/new' do
+		@recipe = {
+			id: "",
+			title: "",
+			content: ""
+		}
+
+		erb :'recipes/new'
 	end
+	
+	get '/:id' do
+			id = params[:id].to_i
+			@recipe = $recipes[id]
+			erb :'recipes/show'
+		end
+
+
 end
