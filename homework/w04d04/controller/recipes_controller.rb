@@ -1,6 +1,6 @@
 class RecipesController < Sinatra::Base
-	$recipes = [
-	{
+	$recipes = [{
+		
 		id: 0,
 		title: "Devil's Food Cake",
 		content: "jsjjjdj",
@@ -14,8 +14,7 @@ class RecipesController < Sinatra::Base
 		id: 2,
 		title: "Lemon Drizzle",
 		content: "jdjdjdjdj",
-	}
-]
+	}]
 
 	set :root, File.join(File.dirname(__FILE__), '..')
 
@@ -25,6 +24,7 @@ class RecipesController < Sinatra::Base
 		register Sinatra::Reloader
 	end
 
+	# 7 routes start here
 	get '/' do
 		"INDEX"
 		@title = "Recipe Book"
@@ -45,10 +45,24 @@ class RecipesController < Sinatra::Base
 	end
 	
 	get '/:id' do
-			id = params[:id].to_i
-			@recipe = $recipes[id]
-			erb :'recipes/show'
-		end
+		id = params[:id].to_i
+		@recipe = $recipes[id]
+		erb :'recipes/show'
+	end
+
+	post '/' do
+		id = $recipes.length
+
+		new_recipe = {
+			id: id,
+			title: params[:title],
+			content: params[:content]
+		}
+
+		$recipes.push new_recipe
+
+		redirect '/'
+	end
 
 
 end
