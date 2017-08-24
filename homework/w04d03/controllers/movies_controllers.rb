@@ -4,19 +4,24 @@ class MoviesControllers < Sinatra::Base
 		{
 			id: 0,
 			title: "Shawshank Redemption",
-			content: "jajajaja",
+			image: ,
+			content: "A severely underrated film full of suspense.",
 		},
 
 		{
 			id: 1,
 			title: "Blood Diamond",
-			content: "jajajaja",
+			image: ,
+			content: "A moving and graphic representation of the illegal Diamond
+			trade in Sierra Leone",
 		},
 
 		{
 			id: 2,
 			title: "This Is The End",
-			content: "jajajaja",
+			image: ,
+			content: "A thoroughly hilarious ensemble cast portraying parodied versions
+			of themselves doing their best to survive during the Apocalypse.",
 		}
 	]
 
@@ -35,7 +40,7 @@ class MoviesControllers < Sinatra::Base
 		erb :'movies/index'
 	end
 
-	get '/new' do
+get '/new' do
 		"NEW"
 	end
 

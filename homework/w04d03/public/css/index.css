@@ -10,3 +10,19 @@ h1 {
 	margin-left: 400px;
 	margin-right: 400px;
 }
+
+p {
+	text-align: center;
+	background-color: #0D1F2D;
+	color: white;
+}
+
+img {
+
+	width: 25%;
+}
+
+.uniClass h1 {
+	background-color: grey;
+	display: inline-block;
+}
