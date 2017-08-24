@@ -64,5 +64,20 @@ class RecipesController < Sinatra::Base
 		redirect '/'
 	end
 
+	put '/:id' do
+		id = params[:id].to_i
+		recipe = $recipes[id]
+		recipe[:title] = params[:title]
+		recipe[:content] = params[:content]
+
+		$recipes[id] = recipe
+
+		redirect '/'
+	end
+
+	delete '/:id' do
+
+	end
+
 
 end
