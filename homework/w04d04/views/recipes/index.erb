@@ -1,0 +1,8 @@
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+<% @recipes.each do |recipe| %>
+	<div>
+		<h3><a href="/<%= recipe[:id] %>"><%= recipe[:title] %></a></h3>
+		<p><%= recipe[:content] %></a></p>
+	</div>
+<% end %>

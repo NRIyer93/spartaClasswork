@@ -1,5 +1,6 @@
 class RecipesController < Sinatra::Base
-	$recipes = [{
+	$recipes = [
+	{
 		id: 0,
 		title: "Devil's Food Cake",
 		content: "jsjjjdj",
@@ -12,9 +13,9 @@ class RecipesController < Sinatra::Base
 	{
 		id: 2,
 		title: "Lemon Drizzle",
-		content: "jdjdjdjdj"
+		content: "jdjdjdjdj",
 	}
-	]
+]
 
 	set :root, File.join(File.dirname(__FILE__), '..')
 
@@ -26,5 +27,16 @@ class RecipesController < Sinatra::Base
 
 	get '/' do
 		"INDEX"
+		@title = "Recipe Book"
+
+		@recipes = $recipes
+
+		erb :'recipes/index'
+	end
+
+	get '/:id' do
+		id = params[:id].to_i
+		@recipe = $recipes[id]
+		erb :'recipes/show'
 	end
 end
