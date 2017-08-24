@@ -26,7 +26,7 @@ class RecipesController < Sinatra::Base
 
 	# 7 routes start here
 	get '/' do
-		"INDEX"
+		
 		@title = "Recipe Book"
 
 		@recipes = $recipes
@@ -35,6 +35,7 @@ class RecipesController < Sinatra::Base
 	end
 
 	get '/new' do
+		
 		@recipe = {
 			id: "",
 			title: "",
@@ -45,12 +46,15 @@ class RecipesController < Sinatra::Base
 	end
 	
 	get '/:id' do
+		
 		id = params[:id].to_i
 		@recipe = $recipes[id]
 		erb :'recipes/show'
+
 	end
 
 	post '/' do
+		
 		id = $recipes.length
 
 		new_recipe = {
@@ -62,6 +66,7 @@ class RecipesController < Sinatra::Base
 		$recipes.push new_recipe
 
 		redirect '/'
+	
 	end
 
 	put '/:id' do
@@ -73,10 +78,22 @@ class RecipesController < Sinatra::Base
 		$recipes[id] = recipe
 
 		redirect '/'
+	
 	end
 
 	delete '/:id' do
 
+		id = params[:id].to_i
+
+		$recipes.delete_at(id)
+
+		redirect '/'
+	end
+
+	get '/:id/edit' do
+		id = params[:id].to_i
+		@recipe = $recipes[id]
+		erb :'recipes/edit'
 	end
 
 
