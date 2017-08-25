@@ -3,17 +3,17 @@ class RecipesController < Sinatra::Base
 		
 		id: 0,
 		title: "Devil's Food Cake",
-		content: "jsjjjdj",
+		content: "Sickly, chocolate Cake",
 	},
 	{
 		id: 1,
 		title: "Carbonara",
-		content: "jdjdjdjdj",
+		content: "Made the right way",
 	},
 	{
 		id: 2,
 		title: "Lemon Drizzle",
-		content: "jdjdjdjdj",
+		content: "Sweet Christmas",
 	}]
 
 	set :root, File.join(File.dirname(__FILE__), '..')
