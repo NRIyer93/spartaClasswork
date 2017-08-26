@@ -1,0 +1,8 @@
+<h1>Welcome to the homepage</h1>
+
+<% @guides.each do |guide| %>
+<div>
+  <h3><a href="/<%= post.id %>"><%= guide.title %></a></h3>
+  <p><%= guide.content %></p>
+</div>
+<% end %>
