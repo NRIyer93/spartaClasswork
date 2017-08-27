@@ -1,16 +1,22 @@
-<form action="/<%= @guide.id %>" method="POST">
-	<% if(@guide.id != "") %>
-		<input type="hidden" name="_method" method="PUT">
-	<% end %>
-	<div>
-		<label>City name</label>
-		<input type="text" name="title" placeholder="Enter city name" value="<%= @guide.title %>">
-	</div>
-	<div>
-		<label>Description</label>
-		<textarea name="content" placeholder="Tell us"> <%= @guide.content %></textarea>
-	</div>
-	<div>
-		<input type="submit" name="Save entry">
-	</div>
-</form>
+<div class="entryForm">
+	<form action="/<%= @guide.id %>" method="POST">
+		<% if(@guide.id != "") %>
+			<input type="hidden" name="_method" method="PUT">
+		<% end %>
+		<div class="form-group">
+			<label>City Name: </label>
+			<ul>
+				<li><input type="text" name="title" placeholder="Enter city name" value="<%= @guide.title %>"></li>
+			</ul>
+		</div>
+		<div class="form-group">
+			<label>Description: </label>
+			<ul>
+				<li><textarea name="content" placeholder="Tell us"> <%= @guide.content %></textarea></li>
+			</ul>
+		</div>
+		<div>
+			<button type="submit" class="btn btn-default" name="Save entry">Save Entry</button>
+		</div>
+	</form>
+</div>	

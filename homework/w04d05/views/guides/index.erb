@@ -1,8 +1,26 @@
-<h1>Welcome to the homepage</h1>
+<h1>Home</h1>
 
 <% @guides.each do |guide| %>
-<div>
-  <h3><a href="/<%= guide.id %>"><%= guide.title %></a></h3>
-  <p><%= guide.content %></p>
+
+<!-- button to trigger the modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal-<%= guide.id %>"><%= guide.title %>
+</button>
+
+<!-- Modal start -->
+<div class="modal fade" id="myModal-<%= guide.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3><a href="/<%= guide.id %>"><%= guide.title %></a></h3>
+			</div>
+			<div class="modal-body">
+				<p><%= guide.content %></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
 </div>
 <% end %>

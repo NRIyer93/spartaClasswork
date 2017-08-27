@@ -1,0 +1,21 @@
+ul {
+	list-style-type: none;
+}
+
+h1 {
+	text-align: center;
+	border-color: 2px solid black;
+	font-family: Times;
+}
+
+.entryForm {
+	text-align: center;
+}
+
+.newEntry {
+	text-align: center;
+}
+
+.form-group li {
+	text-align: center;
+}

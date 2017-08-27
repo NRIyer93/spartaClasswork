@@ -16,6 +16,16 @@ class GuidesController < Sinatra::Base
 		erb :'guides/index'
 	end 
 
+	get '/new' do
+		@guide = Guide.new
+		@guide.id = ""
+		@guide.title = ""
+		@guide.content = ""
+
+		erb :'guides/new'
+
+	end
+
 	get '/:id' do
 		id = params[:id].to_i
 
