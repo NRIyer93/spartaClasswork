@@ -11,9 +11,27 @@ class GuidesController < Sinatra::Base
 	get '/' do
 		@title = "Travel Guides"
 
-		@guides = Post.all
+		@guides = Guide.all
 
 		erb :'guides/index'
 	end 
+
+	get '/:id' do
+		id = params[:id].to_i
+
+		@guide = Guide.find id
+
+		erb :'guides/show'
+	end
+
+	post '/' do
+		guide = Guide.new
+		guide.title = params[:title]
+		guide.content = params[:content]
+
+		guide.save
+
+		redirect '/'
+	end
 
 end

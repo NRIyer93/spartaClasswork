@@ -2,7 +2,7 @@ class Guide
 	attr_accessor :id, :title, :content
 
 	def self.open_connection
-		PG.connect(dbname: "blog")
+		PG.connect(dbname: "guide")
 	end
 
 	def self.hydrate data
@@ -20,10 +20,10 @@ class Guide
 		results = conn.exec(sql)
 
 		guides = results.map do |result|
-			self.hydate result
+			self.hydrate result
 		end
 
-		guide
+		guides
 	end
 
 	def self.find id
@@ -31,14 +31,9 @@ class Guide
 		sql = "SELECT id, title, content FROM guide WHERE id = #{id} LIMIT 1"
 		guides = conn.exec(sql)
 
-		guide = self.hydate guides[0]
+		guide = self.hydrate guides[0]
 
 		guide
 	end
-
-	
-
-
-
 
 end
