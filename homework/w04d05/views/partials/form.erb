@@ -1,7 +1,7 @@
 <div class="entryForm">
 	<form action="/<%= @guide.id %>" method="POST">
 		<% if(@guide.id != "") %>
-			<input type="hidden" name="_method" method="PUT">
+			<input type="hidden" name="_method" value="PUT">
 		<% end %>
 		<div class="form-group">
 			<label>City Name: </label>
@@ -12,11 +12,12 @@
 		<div class="form-group">
 			<label>Description: </label>
 			<ul>
-				<li><textarea name="content" placeholder="Tell us"> <%= @guide.content %></textarea></li>
+				<li><textarea name="content" placeholder="Tell us"><%= @guide.content %>
+				</textarea></li>
 			</ul>
 		</div>
 		<div>
-			<button type="submit" class="btn btn-default" name="Save entry">Save Entry</button>
+			<button type="submit" class="btn btn-default" value="Save entry">Save Entry</button>
 		</div>
 	</form>
-</div>	
+</div>

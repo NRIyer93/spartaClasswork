@@ -44,4 +44,33 @@ class GuidesController < Sinatra::Base
 		redirect '/'
 	end
 
+	put '/:id' do
+		id = params[:id].to_i
+		guide = Guide.find id
+
+		guide.title = params[:title]
+		guide.content = params[:content]
+
+		guide.save
+
+		redirect '/'
+	end
+
+	delete '/:id' do
+		id = params[:id].to_i
+
+		Guide.destroy id
+
+		redirect '/'
+		
+	end
+
+	get '/:id/edit' do
+		id = params[:id].to_i
+
+		@guide = Guide.find id
+
+		erb :'guides/edit'
+	end
+
 end

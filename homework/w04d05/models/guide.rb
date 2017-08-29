@@ -37,13 +37,12 @@ class Guide
 	end
 
 	def save
-		conn = Post.open_connection
+		conn = Guide.open_connection
 		if (!self.id)
 			sql = "INSERT INTO guide (title, content) VALUES ('#{self.title}', '#{self.content}')"
 		else
 			sql = "UPDATE guide SET title='#{self.title}', content='#{self.content}' WHERE id = #{self.id}"
 		end
-
 		conn.exec(sql)
 	end
 

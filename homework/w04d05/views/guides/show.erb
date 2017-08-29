@@ -1,3 +1,7 @@
 <h1><%= @guide.title %></h1>
 <p><%= @guide.content %></p>
-<a href="/@guide.id %>/edit">Edit entry</a>
+<a href="/<%= @guide.id %>/edit">Edit entry</a>
+<form action="/<%= @guide.id %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" value="DELETE">
+</form>

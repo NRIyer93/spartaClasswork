@@ -16,6 +16,15 @@ h1 {
 	text-align: center;
 }
 
+.editEntry {
+	align-content: center;
+}
+
 .form-group li {
 	text-align: center;
 }
+
+.modal-header h3 {
+	text-align: center;
+}
+
