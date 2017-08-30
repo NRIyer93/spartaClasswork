@@ -1,0 +1,40 @@
+ul {
+	list-style-type: none;
+}
+
+h1 {
+	text-align: center;
+	border-color: 2px solid black;
+	font-family: Times;
+}
+
+.entryForm {
+	text-align: center;
+}
+
+.newEntry {
+	text-align: center;
+}
+
+.editEntry {
+	align-content: center;
+}
+
+.form-group li {
+	text-align: center;
+}
+
+.modal-header h3 {
+	text-align: center;
+}
+
+.jumbotron {
+	background-image: url("http://www.bihtt.com/about%20image/travel-banner.jpg");
+	background-size: 100% 100%;
+}
+.jumbotron h1 {
+
+	font-family: "Courier New", Courier, monospace;
+	
+}
+
