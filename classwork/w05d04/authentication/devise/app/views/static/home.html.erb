@@ -1,0 +1,12 @@
+<div class="jumbotron">
+	<h1>Home</h1>
+</div>
+
+ <% if user_signed_in? %>
+	Logged in as <%= current_user.email %>
+
+
+
+ <% else %>
+ 	<p>You are not logged in</p>
+ <% end %>
