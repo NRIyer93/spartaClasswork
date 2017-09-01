@@ -10,7 +10,7 @@
         <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
         <li><%= link_to 'Users', users_path %></li>
         <li><%= link_to 'Posts', posts_path %></li>
-         <li><%= link_to 'My Posts' %></li>
+         <li><%= link_to 'My Posts', user_path(current_user.id) %></li>
       
       <% else %>
         <li><%= link_to 'Login', new_user_session_path %></a></li>

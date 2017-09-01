@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :posts
   root 'static#home'
-  get 'user_posts/:user_id' => 'posts#user', as: :user_posts
+  get 'user/:id' => 'user#show'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

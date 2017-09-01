@@ -1,5 +1,6 @@
-<h1><%= user.email %></h1>
 
-<% @posts.each do |post| %>
-   <h4><%= post.body %></h4>
+<h1><%= current_user.email %></h1>
+<h2>Your posts: </h2>
+<% current_user.posts.each do |post| %>
+   <h5><%= post.body %></h5>
 <% end %>
