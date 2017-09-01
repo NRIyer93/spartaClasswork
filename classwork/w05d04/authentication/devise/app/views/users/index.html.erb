@@ -1,6 +1,15 @@
-<p>These are the users</p>
 
-<% @users.each do |user| %>
-	<p><%= user.email %></p>
-	
+<% if user_signed_in? %>
+	<p>These are the users</p>
+
+	<% @users.each do |user| %>
+		<p><%= user.email %></p>
+
+		
+	<% end %>
+
+<h4>Current user is: <%= current_user.email %></h4>
+
+<% else %>
+	<p>You need to be signed in to view users</p>
 <% end %>
